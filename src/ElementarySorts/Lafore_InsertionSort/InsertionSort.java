@@ -7,12 +7,12 @@ public class InsertionSort {
 
     public InsertionSort(int max) {
         a = new int[max];
-        nElements = a.length;
+        nElements = a.length - 1;
     }
 
     public void shouldDisplayDataFromArray() {
         System.out.println("Before Sorting");
-        for (int i = 0; i < nElements - 1; i++) {
+        for (int i = 0; i < nElements; i++) {
             a[i] = (int) (Math.random() * 100);
             System.out.print(a[i] + " ");
         }
@@ -21,7 +21,7 @@ public class InsertionSort {
 
     public void shouldMakeInsertionSort() {
         int i, j;
-        for (j = 1; j < nElements - 1; j++) {
+        for (j = 1; j < nElements; j++) {
             int temp = a[j];
             i = j;
             while (i > 0 && a[i - 1] >= temp) {
@@ -34,7 +34,7 @@ public class InsertionSort {
 
     public void shouldDisplayDataFromArrayAfterSorting() {
         System.out.println("After Sorting");
-        for (int i = 0; i < nElements - 1; i++) {
+        for (int i = 0; i < nElements; i++) {
             System.out.print(a[i] + " ");
         }
         System.out.println("");
